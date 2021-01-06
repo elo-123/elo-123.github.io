@@ -1,0 +1,699 @@
+* {box-sizing: border-box}
+
+html, body {
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  overscroll-behavior-x: none;
+  font-family: 'Patrick Hand', cursive !important;
+  font-size:20px;
+  cursor: url(../images/coquillage-4.png)25 25,auto;
+}
+
+.map {
+  overflow: hidden;
+  max-width: 1999px;
+  width:100%;
+  height: 100%;
+  position:absolute;
+  top:0;
+  left:0;
+  /*
+  left:50%;
+  transform:translateX(-50%);
+  */
+  bottom:0;
+  right:0;
+}
+
+
+.inner {
+  position:relative;
+  width:2000px;
+  height:6000px;
+  background:url(../images/map.png) no-repeat center center / 100% auto;
+  overflow:hidden;
+
+}
+
+.element{
+  position:absolute;
+}
+
+.image {
+  position:absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+}
+
+.menu-info {
+  width: 250px;
+  background: white;
+  bottom:100px;
+  padding:10px 20px;
+  margin-bottom: 5px;
+  font-size: 22px;}
+
+.menu-item {
+  width: 250px;
+  background: white;
+  padding: 10px 20px;
+  margin-bottom: 5px;}
+
+
+  .recommencer {
+    font-size: 50px;
+    font-weight: 500px;
+    background:#fff1d0;
+    color: #1a3c58 ;
+    padding: 60px;
+    z-index: 100000000;
+    position: fixed;
+    display : none;
+    top: 50%;
+    left : 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    border-radius: 20px;
+
+  }
+
+
+.text {
+  color: #1a3c58;
+  font-size: 50px;
+  padding-top: 25px;
+}
+
+.bouton {
+  color :#fff1d0;
+  background: #1a3c58 ;
+  border: solid 2px #1a3c58;
+  border-radius: 20px;
+  padding: 20px;
+  transition: all 320ms ease;
+}
+
+.bouton:hover {
+  color:#fff1d0;
+  background: #2d6694;
+  border: solid 5px #1a3c58;
+  opacity: 90%
+}
+
+.bouton:active {
+  transition: all 120ms ease;
+  color: #fff1d0;
+  background: #c69090;
+  font-size: 40px;
+}
+
+
+
+#element1 { /*algue1*/
+  top: 5100px;
+  left: 20px;
+  width: 600px;
+  height: 700px;
+  background: url(../images/algue1.png) no-repeat center center / 100% auto;
+  animation: shakebulle 2.82s cubic-bezier(.36,.07,.19,.97) infinite;
+
+}
+
+#element2 { /*algue2*/
+  top: 5050px;
+  left: 400px;
+  width: 800px;
+  height: 800px;
+  background: url(../images/algue2.png) no-repeat center center / 100% auto;
+}
+
+#element3 { /*anémone1*/
+  top: 5420px;
+  left: 400px;
+  width: 400px;
+  height: 500px;
+  background: url(../images/anemone.png) no-repeat center center / 100% auto;
+}
+
+#element4 { /*anémone2*/
+  top: 5250px;
+  left: 1250px;
+  width: 400px;
+  height: 500px;
+  background: url(../images/anemone2.png) no-repeat center center / 100% auto;
+  animation: shake 4s cubic-bezier(.36,.07,.19,.97) infinite;
+}
+
+#element5 { /*corail*/
+  top: 5420px;
+  left: 1450px;
+  width: 500px;
+  height: 500px;
+  background: url(../images/corail.png) no-repeat center center / 100% auto;
+}
+
+#element6 { /*corail2*/
+  top: 5500px;
+  left: 1150px;
+  width: 250px;
+  height: 350px;
+  background: url(../images/corail2.png) no-repeat center center / 100% auto;
+}
+
+#element7 { /*serpent*/
+  top: 4500px;
+  left: 1100px;
+  width: 700px;
+  height: 700px;
+  transform: rotate(20deg);
+}
+
+#element7 .image {
+  animation: shake 2.82s cubic-bezier(.36,.07,.19,.97) infinite;
+  background: url(../images/serpent.png) no-repeat center center / 100% auto;
+}
+
+#element8{ /*lanterne*/
+  top: 4600px;
+  left: 1100px;
+  width: 350px;
+  height: 350px;
+  background: url(../images/lanterne.png) no-repeat center center / 100% auto;
+}
+
+#element9{ /*requin*/
+  top: 4000px;
+  left:90px;
+  width: 880px;
+  height: 880px;
+  transform: rotate(350deg);
+}
+
+#element9 .image {
+  background: url(../images/requin.png) no-repeat center center / 100% auto;
+  animation: byebye 13s /*linear, ease ou code sur https://cubic-bezier.com*/ cubic-bezier(.1,.93,.12,.9)
+infinite; }
+
+#element10{ /*etoile*/
+  top: 3900px;
+  left:1300px;
+  width: 260px;
+  height: 310px;
+  background: url(../images/etoile.png) no-repeat center center / 100% auto;
+}
+
+
+#element11{ /*thon*/
+  top: 3550px;
+  left:800px;
+  width: 500px;
+  height: 500px;
+  background: url(../images/thon.png) no-repeat center center / 100% auto;
+  transform: rotate(340deg);
+}
+
+#element12{ /*bulot*/
+  top: 3800px;
+  left:300px;
+  width: 120px;
+  height: 420px;
+  transform: rotate(40deg);
+}
+#element12 .image {
+  background: url(../images/bulot.png) no-repeat center center / 100% auto;
+  animation: rotation3  6s  cubic-bezier(.36,.07,.19,.97) infinite; }
+
+#element13{ /*poulpe*/
+  top: 2950px;
+  left:150px;
+  width: 730px;
+  height: 730px;
+  background: url(../images/poulpe.png) no-repeat center center / 100% auto;
+  animation: monter2 2.82s cubic-bezier(.36,.07,.19,.97) infinite;
+}
+
+#element14{ /*clown*/
+  top: 3400px;
+  left:1500px;
+  width: 350px;
+  height: 350px;
+  transform: rotate(20deg);
+}
+#element14 .image {
+  background: url(../images/clown.png) no-repeat center center / 100% auto;
+  animation: arriere 5s  cubic-bezier(.36,.07,.19,.97) infinite; }
+
+#element15{ /*oursin*/
+  top: 2800px;
+  left:1650px;
+  width: 250px;
+  height: 250px;
+  background: url(../images/oursin.png) no-repeat center center / 100% auto;
+
+}
+
+#element16{ /*bout d'algue 2 */
+  top: 3200px;
+  left:1200px;
+  width: 100px;
+  height: 250px;
+  background: url(../images/bout_algue2.png) no-repeat center center / 100% auto;
+  transform: rotate(20deg);
+  animation: rotation 10s cubic-bezier(.36,.07,.19,.97) infinite;
+}
+
+
+#element17{ /* tortue */
+  top: 2250px;
+  left:930px;
+  width: 600px;
+  height: 600px;
+  background: url(../images/tortue.png) no-repeat center center / 100% auto;
+  z-index: 3;
+
+}
+
+#element18{ /* cocher*/
+  top: 2400px;
+  left:300px;
+  width: 280px;
+  height: 320px;
+  transform: rotate(30deg);
+
+}
+
+#element18 .image {
+  background: url(../images/cocher.png) no-repeat center center / 100% auto;
+  animation: rotation2  10s  cubic-bezier(.36,.07,.19,.97) infinite; }
+
+#element19{ /* hippocampe*/
+  top: 1800px;
+  left:1700px;
+  width: 130px;
+  height: 400px;
+  background: url(../images/hippocampe.png) no-repeat center center / 100% auto;
+
+}
+
+#element20 { /* raie */
+  top: 600px;
+  left:50px;
+  width: 650px;
+  height: 780px;
+  transform: rotate(60deg);
+
+}
+
+#element20 .image {
+  background: url(../images/raie.png) no-repeat center center / 100% auto;
+  animation: arriere2 10s  cubic-bezier(.36,.07,.19,.97) infinite; }
+
+
+
+#element21{ /*méduse*/
+  top: 500px;
+  left:1600px;
+  width: 250px;
+  height: 800px;
+  background: url(../images/meduse.png) no-repeat center center / 100% auto;
+  animation: monter 8s cubic-bezier(.36,.07,.19,.97) infinite;
+
+}
+
+#element22{ /*chirurgien*/
+  top: 900px;
+  left:1150px;
+  width: 350px;
+  height: 300px;
+  background: url(../images/chirurgien.png) no-repeat center center / 100% auto;
+  transform: rotate(320deg);
+}
+
+#element23{ /*sac*/
+  top: 350px;
+  left:700px;
+  width: 300px;
+  height: 400px;
+  transform: rotate(320deg);
+}
+
+#element23 .image {
+  animation: shake 2.82s cubic-bezier(.36,.07,.19,.97) infinite;
+  background: url(../images/sac.png) no-repeat center center / 100% auto;
+}
+
+#element24{ /*crabe*/
+  top: 1500px;
+  left:1000px;
+  width: 400px;
+  height: 400px;
+  transform: rotate(340deg);
+}
+
+#element24 .image {
+    animation: monter 2s cubic-bezier(.36,.07,.19,.97) infinite;
+    background: url(../images/crabe.png) no-repeat center center / 100% auto;
+}
+
+#element25{ /*bout_algue*/
+  top: 1400px;
+  left:700px;
+  width: 80px;
+  height: 250px;
+  background: url(../images/bout_algue.png) no-repeat center center / 100% auto;
+  transform: rotate(40deg);
+}
+
+#element26{ /*bouteille*/
+  top: 1680px;
+  left:200px;
+  width: 90px;
+  height: 260px;
+  transform: rotate(340deg);
+}
+#element26 .image {
+    animation: dechet1 10s cubic-bezier(.36,.07,.19,.97) infinite;
+    background: url(../images/bouteille.png) no-repeat center center / 100% auto;
+}
+
+#element27{ /*chelmon*/
+  top: 2345px;
+  left:1040px;
+  width: 300px;
+  height: 300px;
+  transform: rotate(25deg);
+  z-index: 1;
+}
+#element27 .image {
+  background: url(../images/chelmon.png) no-repeat center center / 100% auto;
+  animation: byebye2 10s /*linear, ease ou code sur https://cubic-bezier.com*/ linear reverse
+infinite; }
+
+#element28{ /*conserve*/
+  top: 3900px;
+  left:1700px;
+  width: 230px;
+  height: 230px;
+  background: url(../images/conserve.png) no-repeat center center / 100% auto;
+  animation: dechet2 13s cubic-bezier(.36,.07,.19,.97) infinite;
+
+}
+
+#element29{ /*plastique*/
+  top: 4900px;
+  left:200px;
+  width: 150px;
+  height: 200px;
+  background: url(../images/plastique.png) no-repeat center center / 100% auto;
+
+}
+
+#element30{ /*bulle*/
+  width: 2000px;
+  height: 6000px;
+  background: url(../images/bulle.png) no-repeat center center / 100% auto;
+  animation: shakebulle 2.82s cubic-bezier(.36,.07,.19,.97) infinite;
+  pointer-events: none;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+    ,3
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+
+
+@keyframes byebye {
+  0% {
+    transform: translate3d(-50vw, 0, 0);
+  }
+
+  60% {
+    transform: translate3d(30vw, 100px, 0);
+  }
+
+  100% {
+    transform: translate3d(150vw, 0, 0);
+  }
+}
+
+
+@keyframes byebye2 {
+  0% {
+    transform: translate3d(-110vw, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(0vw, 100, 100);
+  }
+
+}
+
+
+
+@keyframes monter {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, 60px, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes monter2{
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, 60px, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes dechet1{
+  0%, 75% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  85% {
+    transform: rotate(60deg);
+  }
+
+  95%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes dechet2{
+  0%, 60% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  70% {
+    transform: rotate(310deg);
+  }
+
+  80%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+
+@keyframes shakebulle {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  45% {
+    transform: translate3d(0, 20px, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotation2 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(-50deg);
+  }
+  100% {
+    transform: rotate(0deg);
+    }
+}
+
+@keyframes rotation3 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(50deg);
+  }
+  100% {
+    transform: rotate(0deg);
+    }
+}
+
+
+@keyframes arriere{
+  0% {
+    transform: translate3d(0vw, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(50vw, 0, 0);
+  }
+  100% {
+    transform: translate3d(0vw, 0, 0);
+  }
+}
+
+@keyframes arriere2{
+  0% {
+    transform: translate3d(0vw, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0vw, 5vw, 0);
+  }
+  100% {
+    transform: translate3d(0vw, 0, 0);
+  }
+}
+
+
+.hotspot.found {
+  opacity:.5 !important;
+}
+
+.count {
+  position:fixed;
+  top:20px;
+  right:20px;
+  background:white;
+  padding:10px 20px;
+  border-radius:30px;
+  font-size:32px;
+  z-index:10000;
+}
+
+.menu {
+  position:fixed;
+  width:250px;
+  top:100px;
+  right:20px;
+  z-index:10000;
+}
+
+.menu2 {
+  position:fixed;
+  top:200px;
+  right:20px;
+  z-index:10000;
+}
+
+
+.menu-item {
+  width:100%;
+  background:white;
+  padding:8px 16px;
+  border-radius:3px;
+  font-size:22px;
+  margin-bottom:4px;
+  display:none;
+}
+
+.menu-item .item-not-found {
+  display:block;
+}
+
+.menu-item .item-found {
+  display:none;
+}
+.menu-item.found {
+  display:block;}
+.menu-item.found .item-not-found {
+  display:none;
+}
+
+.menu-item.found .item-found {
+  display:block;
+}
+
+
+.fiche {
+  position:fixed;
+  top:50px;
+  left:50px;
+  width:300px;
+  background:white;
+  padding:10px;
+  display:none;
+}
+
+.fiche.show {
+  display:block;
+}
+
+.close {
+  position:absolute;
+  top:30px;
+  left:30px;
+  background:#224663;
+  border-radius:50%;
+  width:30px;
+  height:30px;
+  cursor:pointer;
+  transform:scale(0);
+  transition:all 300ms ease;
+}
+
+.close.show {
+  transform:scale(1);
+}
+.menu-content {
+  max-height: 300px;
+  overflow: auto;
+}

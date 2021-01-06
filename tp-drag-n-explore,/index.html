@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>TP Drag'n'explore</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/css.css">
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+
+  <div class="recommencer">
+    Bravo!
+    <div class="text"> Vous avez terminé! <br> <br>
+      <a class="bouton" onclick="document.location.reload();">Rejouez </a>
+    </div>
+  </div>
+  <div class="map">
+    <div class="inner">
+      <div class="element" id="element1"></div>
+      <div class="element" id="element2"></div>
+      <div class="element" id="element3"></div>
+      <div class="element" id="element4"></div>
+      <div class="element" id="element5"></div>
+      <div class="element" id="element6"></div>
+      <div class="element" id="element7"><div class="image"></div></div>
+      <div class="element" id="element8"></div>
+      <div class="element" id="element9"><div class="image"></div></div>
+      <div class="element" id="element10"></div>
+      <div class="element" id="element11"></div>
+      <div class="element" id="element12"><div class="image"></div></div>
+      <div class="element" id="element13"></div>
+      <div class="element" id="element14"><div class="image"></div></div>
+      <div class="element" id="element15"></div>
+      <div class="element" id="element16"></div>
+      <div class="element" id="element17"></div>
+      <div class="element" id="element18"><div class="image"></div></div>
+      <div class="element" id="element19"></div>
+      <div class="element" id="element20"><div class="image"></div></div>
+      <div class="element" id="element21"></div>
+      <div class="element" id="element22"></div>
+      <div class="element" id="element23"><div class="image"></div></div>
+      <div class="element" id="element24"><div class="image"></div></div>
+      <div class="element" id="element25"></div>
+      <div class="element" id="element26"><div class="image"></div></div>
+      <div class="element" id="element27"><div class="image"></div></div>
+      <div class="element" id="element28"></div>
+      <div class="element" id="element29"></div>
+      <div class="element" id="element30"></div>
+    </div>
+  </div>
+
+
+
+
+  <div class="count">
+    <span id="count_found">0</span> / 29
+  </div>
+
+  <div class="menu" id="menunotification">
+    <div class="menu-item" data-hotspot="element1">
+      <div class="item-found">Vous avez trouvé une algue !</div>
+    </div>
+    <div class="menu-item" data-hotspot="element2">
+      <div class="item-found">Vous avez trouvé une algue !</div>
+    </div>
+    <div class="menu-item" data-hotspot="element3">
+      <div class="item-found">Vous avez trouvé une anémone !</div>
+    </div>
+    <div class="menu-item" data-hotspot="element4">
+      <div class="item-found">Vous avez trouvé une anémone !</div>
+    </div>
+    <div class="menu-item" data-hotspot="element5">
+      <div class="item-found">Vous avez trouvé du corail !</div>
+    </div>
+    <div class="menu-item" data-hotspot="element6">
+      <div class="item-found">Vous avez trouvé du corail !</div>
+    </div>
+    <div class="menu-item" data-hotspot="element7">
+      <div class="item-found">Vous avez trouvé un serpent de mer !</div>
+    </div>
+    <div class="menu-item" data-hotspot="element8">
+      <div class="item-found">Vous avez trouvé un poisson lanterne !</div>
+    </div>
+    <div class="menu-item" data-hotspot="element9">
+      <div class="item-found">Vous avez trouvé un requin!</div>
+    </div>
+    <div class="menu-item" data-hotspot="element10">
+      <div class="item-found">Vous avez trouvé une étoile de mer !</div>
+    </div>
+    <div class="menu-item" data-hotspot="element11">
+      <div class="item-found">Vous avez trouvé un thon !</div>
+    </div>
+    <div class="menu-item" data-hotspot="element12">
+      <div class="item-found">Vous avez trouvé un bulot !</div>
+    </div>
+    <div class="menu-item" data-hotspot="element13">
+      <div class="item-found">Vous avez trouvé une pieuvre !</div>
+    </div>
+    <div class="menu-item" data-hotspot="element14">
+      <div class="item-found">Vous avez trouvé un poisson-clown!</div>
+    </div>
+    <div class="menu-item" data-hotspot="element15">
+      <div class="item-found">Vous avez trouvé un oursin !</div>
+    </div>
+    <div class="menu-item" data-hotspot="element16">
+      <div class="item-found">Vous avez trouvé un fragment d'algue !</div>
+    </div>
+    <div class="menu-item" data-hotspot="element17">
+      <div class="item-found">Vous avez une tortue !</div>
+    </div>
+    <div class="menu-item" data-hotspot="element18">
+      <div class="item-found">Vous avez trouvé un poisson-cocher !</div>
+    </div>
+    <div class="menu-item" data-hotspot="element19">
+      <div class="item-found">Vous avez trouvé un hippocampe !</div>
+    </div>
+    <div class="menu-item" data-hotspot="element20">
+      <div class="item-found">Vous avez trouvé une raie !</div>
+    </div>
+    <div class="menu-item" data-hotspot="element21">
+      <div class="item-found">Vous avez trouvé une méduse!</div>
+    </div>
+    <div class="menu-item" data-hotspot="element22">
+      <div class="item-found">Vous avez trouvé un poisson chirurgien !</div>
+    </div>
+    <div class="menu-item" data-hotspot="element23">
+      <div class="item-found">Vous avez trouvé un déchet !</div>
+    </div>
+    <div class="menu-item" data-hotspot="element24">
+      <div class="item-found">Vous avez trouvé un crabe !</div>
+    </div>
+    <div class="menu-item" data-hotspot="element25">
+      <div class="item-found">Vous avez trouvé un fragment d'algue !</div>
+    </div>
+    <div class="menu-item" data-hotspot="element26">
+      <div class="item-found">Vous avez trouvé un déchet !</div>
+    </div>
+    <div class="menu-item" data-hotspot="element27">
+      <div class="item-found">Vous avez trouvé un chelmon à bec médiocre !</div>
+    </div>
+    <div class="menu-item" data-hotspot="element28">
+      <div class="item-found">Vous avez trouvé un déchet!</div>
+    </div>
+    <div class="menu-item" data-hotspot="element29">
+      <div class="item-found">Vous avez trouvé un déchet !</div>
+    </div>
+  </div>
+
+  <div class="menu2">
+    <div class="menu-info"> Animaux trouvés </div>
+    <div class="menu-content">
+      <div class="menu-item" data-fiche="fiche1" data-hotspot="element1">
+        <div class="item-found"> Une algue verte </div>
+      </div>
+      <div class="menu-item" data-fiche="fiche1" data-hotspot="element2">
+        <div class="item-found"> Une algue rouge</div>
+      </div>
+      <div class="menu-item" data-fiche="fiche2" data-hotspot="element3">
+        <div class="item-found"> L'anémone tire bouchon </div>
+      </div>
+      <div class="menu-item" data-fiche="fiche2" data-hotspot="element4">
+        <div class="item-found"> L'anémone-cuir  </div>
+      </div>
+      <div class="menu-item" data-fiche="fiche3" data-hotspot="element5">
+        <div class="item-found"> Un corail de feu </div>
+      </div>
+      <div class="menu-item" data-fiche="fiche3" data-hotspot="element6">
+        <div class="item-found"> Un corail à colonnes </div>
+      </div>
+      <div class="menu-item" data-fiche="fiche4" data-hotspot="element7">
+        <div class="item-found"> Un serpent de mer </div>
+      </div>
+      <div class="menu-item" data-fiche="fiche5" data-hotspot="element8">
+        <div class="item-found"> Un poisson lanterne </div>
+      </div>
+      <div class="menu-item" data-fiche="fiche6" data-hotspot="element9">
+        <div class="item-found"> Un requin</div>
+      </div>
+      <div class="menu-item" data-fiche="fiche7" data-hotspot="element10">
+        <div class="item-found"> Une étoile de mer </div>
+      </div>
+      <div class="menu-item" data-fiche="fiche8" data-hotspot="element11">
+        <div class="item-found"> Un thon </div>
+      </div>
+      <div class="menu-item" data-fiche="fiche9" data-hotspot="element12">
+        <div class="item-found"> Un bulot </div>
+      </div>
+      <div class="menu-item" data-fiche="fiche10" data-hotspot="element13">
+        <div class="item-found"> Une pieuvre  </div>
+      </div>
+      <div class="menu-item" data-fiche="fiche11" data-hotspot="element14">
+        <div class="item-found"> Un poisson-clown</div>
+      </div>
+      <div class="menu-item" data-fiche="fiche12" data-hotspot="element15">
+        <div class="item-found"> Un oursin </div>
+      </div>
+      <div class="menu-item" data-fiche="fiche1" data-hotspot="element16">
+        <div class="item-found"> Un fragment d'algue </div>
+      </div>
+      <div class="menu-item" data-fiche="fiche13" data-hotspot="element17">
+        <div class="item-found"> Une tortue </div>
+      </div>
+      <div class="menu-item" data-fiche="fiche14" data-hotspot="element18">
+        <div class="item-found"> Un poisson-cocher </div>
+      </div>
+      <div class="menu-item" data-fiche="fiche15" data-hotspot="element19">
+        <div class="item-found"> Un hippocampe </div>
+      </div>
+      <div class="menu-item" data-fiche="fiche16" data-hotspot="element20">
+        <div class="item-found"> Une raie </div>
+      </div>
+      <div class="menu-item" data-fiche="fiche17" data-hotspot="element21">
+        <div class="item-found"> Une méduse</div>
+      </div>
+      <div class="menu-item" data-fiche="fiche18" data-hotspot="element22">
+        <div class="item-found"> Un poisson chirurgien </div>
+      </div>
+      <div class="menu-item" data-fiche="fiche19" data-hotspot="element23">
+        <div class="item-found"> Un sac plastique </div>
+      </div>
+      <div class="menu-item" data-fiche="fiche20" data-hotspot="element24">
+        <div class="item-found"> Un crabe </div>
+      </div>
+      <div class="menu-item" data-fiche="fiche1" data-hotspot="element25">
+        <div class="item-found"> Un fragment d'algue </div>
+      </div>
+      <div class="menu-item" data-fiche="fiche19" data-hotspot="element26">
+        <div class="item-found"> Une bouteille </div>
+      </div>
+      <div class="menu-item" data-fiche="fiche21" data-hotspot="element27">
+        <div class="item-found"> Un chelmon à bec médiocre </div>
+      </div>
+      <div class="menu-item" data-fiche="fiche19" data-hotspot="element28">
+        <div class="item-found"> Une conserve </div>
+      </div>
+      <div class="menu-item" data-fiche="fiche19" data-hotspot="element29">
+        <div class="item-found"> Du plastique </div>
+    </div>
+    </div>
+  </div>
+
+
+
+  <div class="fiche" id="fiche1" >
+    L'algues fait parti d'un grand groupe de végétaux. Elle vit dans des lieux aquatiques ou humides.
+    On les trouve dans le monde entier, aussi bien dans les eaux douces que salées.
+    Il existe une très grande variété d'algues. Ces dernières ne possèdent ni racines, ni tiges, ni feuilles. C'est ce qui les distingue des autres plantes.
+  </div>
+
+  <div class="fiche" id="fiche2" >
+    L'anémone de mer est remarquable par sa ressemblance avec une fleur. Certaines sont roses, d'autres bleues, ou jaunes. Elle se distingue par son corps sans squelette. Son pied s'accroche comme une ventouse dans le sable ou sur des parois dures. Sa bouche placée au centre est entourée de tentacules paralysants qui sont un danger pour tous les petits habitants de la mer. L'anémone les immobile en leur projetant un poison, elle accepte cependant le poisson clown.
+  </div>
+
+  <div class="fiche" id="fiche3" >
+    Le corail est un animal marin. Il est minuscule et vit en colonie, avec d'autres individus de son espèce. Dans 40 ans, à cause la pollution, il aura peut-être disparu. Les poissons qui le mangent risqueront donc de ne plus pouvoir se nourrir et ainsi mourir.
+
+  </div>
+
+  <div class="fiche" id="fiche4" >
+    Le serpent de mer est un serpents vivant dans la mer.
+    Il est bien adaptés à la mer : il possède un corps cylindrique qui lui permet de fuser sous l'eau. Il est ovovivipare, c'est-à-dire qu'il met au monde ses petits vivants : il n'a donc pas besoin de revenir à terre pour se reproduire, et ne quitte jamais la mer.
+  </div>
+  <div class="fiche" id="fiche5" >
+    Le poisson-lanterne dispose d'un organe qui s'allume et éclaire les profondeurs de l'océan. Il vit au fond de l'océan, à partir de 200 mètres de profondeur, et éclaire les abysses à partir de 600 mètres de profondeur. Il vit dans l'océan Indien et Pacifique.
+  </div>
+  <div class="fiche" id="fiche6" >
+  Le requin est réputé pour être un redoutable prédateur et posséde un odorat exceptionnel. Le requin se trouve dans tous les océans du monde à l'exception de l'Antarctique. Le requin mange d'autres poissons et animaux des profondeurs.
+
+  </div>
+  <div class="fiche" id="fiche7" >
+    L'étoile de mer est un animal marin qui ne possède pas de tête ni de cerveau. Elle est composées d'un corps central, d'une bouche et de cinq bras généralement épais et plutôt courts, lui donnant sa forme d'étoile. On dénombre au moins 1600 espèces différentes, réparties dans tous les océans.
+
+  </div>
+  <div class="fiche" id="fiche8" >
+    Un thon est un poisson pouvant atteindre 4 mètres de long et 700 kilos. Il à des capacités physiques impressionnantes. En plus d’être un excellent nageur, il possède un « système d’échange de chaleur » qui permet de garder les muscles et les organes bien au chaud tout en évoluant dans les eaux froides islandaises par exemple. Le thon est très présent en mer et bien connu des pêcheurs.
+
+  </div>
+  <div class="fiche" id="fiche9" >
+  Le bulot, est une espèce de mollusques. On le trouve dans l'Atlantique jusqu'au nord du Canada et jusqu'à la Sibérie. Cet escargot de mer est vulnérable à la surpêche, mais aussi à la pollution marine.
+  </div>
+  <div class="fiche" id="fiche10" >
+  La pieuvre est un animal marin et invertébré. Elle est aussi appelée poulpe. La pieuvre possède huit tentacules. Il y a des centaines de ventouses sur chaque tentacule. Pour échapper à ses prédateurs, la pieuvre est capable de mimétisme. Elle peut donc changer de couleur et d'aspect ! La pieuvre, lorsqu'elle se sent menacée, peut aussi cracher de l'encre pour distraire ses prédateurs.
+
+  </div>
+  <div class="fiche" id="fiche11" >
+  Le poisson-clown est un poisson orange avec des rayures blanches. On en trouve beaucoup en Polynésie française.Comme tous les autres poissons, ses branchies lui permettent de respirer sous l’eau. Il doit se dandiner à droite et à gauche pour avancer. On dit de lui qu’il danse pour se déplacer. Il se cache dans les anémones de mer pour éviter les prédateurs.
+  </div>
+  <div class="fiche" id="fiche12" >
+    L'oursin est un petit animal marin, on l'appelle aussi châtaigne de mer ou hérisson de mer. Il en existe plus de 900 espèces différentes. Les loutres, les homards, certains crabes et même de grosses étoiles de mer mangent l'oursin, les hommes aussi !
+
+  </div>
+
+  <div class="fiche" id="fiche13" >
+  La tortue marine fait partie de la classe des reptiles. Elle peut mesurer jusqu’à 1,20 m de long. Cet animal peut peser de 200 à 300 kg. Il existe plusieurs espèces (tortue verte, etc.). Elle est de couleur vert foncé, vert clair, jaunâtre et blanc. Elle peut vivre jusqu'a 100 ans et plus. La plus vielle est morte à 152 ans en captivité.
+
+  </div>
+  <div class="fiche" id="fiche14" >
+    Le poisson-cocher commun, aussi nommé heniochus acuminatus,  est une espèce de poissons osseux de petite taille.  Ce poisson vit en groupe en solitaire et réside à proximité du fond. Cet une espèce au tempérament calme et indépendant qui ne se préoccupe pas trop des autres espèces.
+
+  </div>
+  <div class="fiche" id="fiche15" >
+    L'hippocampe est un poisson marin dont l'une des particularités est de pratiquer la nage en position verticale. La femelle pond les œufs dans la poche du mâle, le père est tout seul pour s'occuper des petits. Les bébés restent avec leur père pendant environ 2 mois, après ils sont capables de se débrouiller tout seuls. À cause de son apparence, on le surnomme parfois le cheval de mer. C'est un animal fabuleux où les légendes anciennes racontent que le char du dieu de la mer était tiré par des hippocampes.
+
+  </div>
+  <div class="fiche" id="fiche16" >
+  La raie est la cousine du requin. Elle a le corps aplati, de longues nageoires et la bouche se trouve sur le ventre. Elle peut être géante ou petite comme une assiette. La raie est en danger d’extinction et il y a des chances qu'elle disparaisse d’ici quelques années. Cela se produit à cause de la surpêche et de la pollution marine.
+  </div>
+  <div class="fiche" id="fiche17" >
+ La méduse est un animal marin en forme de cloches, pourvus de 5 longs tentacules. Son corps à l'aspect d'une gelée. La méduse se déplace en suivant les courants d'eau chaude. Son venin peut être dangereux ou juste
+ donner des boutons qui piquent et qui grattent. Il faut savoir que l'ancêtre de tout les animaux et le premier animal est bien la méduse !
+  </div>
+  <div class="fiche" id="fiche18" >
+    Le poisson chirurgien bleu aussi appelé Paracanthurus hepatus est un poisson marin qui se rencontre dans la région Indo-Pacifique et dont la taille maximale connue est de 31 cm. Il vit dans les récifs, au milieu des coraux, où il broute les petites algues dont il se nourrit. C'est un poisson très connu et très prisé en aquarium, même s'il n'est en fait pas très facile à élever.
+
+  </div>
+  <div class="fiche" id="fiche19" >
+    Les activités humaines rejettent dans l’environnement d’énormes quantités de déchets, physiques (en  particulier des objets en plastique) et chimiques (pesticides, hydrocarbures...). Une partie importante de ces déchets arrive dans le milieu marin, apportée par le vent et les cours d’eau, ou encore directement jetée à la mer. Chaque année, ce sont près de 10 millions de tonnes de plastique qui se retrouvent ainsi dans les mers et les océans, polluent des plages et intoxiquent les poissons. En 1997, un navigateur découvre un gigantesque espace en pleine  mer, composé  de  déchets en plastique de toutes sortes. Grande comme six fois la France. On l'appelle le « 7ème continent »
+
+  </div>
+  <div class="fiche" id="fiche20" >
+    Le crabe est un crustacé marin, d'eau douce ou terrestre. Il vit dans tous les océans (en fonction de l'espèce) sauf l'océan Antarctique et l'océan Arctique . Ses pattes permettent de marcher, de courir de côté et de creuser aussi bien que de nager. Le crabe est un prédateur (animal qui chasse des animaux) omnivore dont le régime alimentaire est très étendu (animaux, algues). Il est très vorace, c’est à dire, qu’il mange beaucoup : des coquillages et même des détritus.
+
+  </div>
+
+  <div class="fiche" id="fiche21" >
+    Le chelmon à bec médiocre est l'un des poissons-papillons les plus connus, car il est assez fréquent en aquarium. Il est originaire de l'océan Indien et du Pacifique. Ce poisson carnivore se nourrit de vers et d'autres petits animaux qu'il capture dans les rochers grâce à son museau en forme de bec allongé.
+  </div>
+
+    <div class="close"></div>
+
+
+
+
+
+
+
+  <script src="js/jquery.js"></script>
+  <script src="js/scrollbooster.min.js"></script>
+
+  <script type="text/javascript">
+    let count_found = 0;
+  $(function() {
+
+    $('.element').one('click', function(){
+      count_found++;
+      $(this).addClass('found');
+
+      let id = $(this).attr('id');
+      $("#menunotification .menu-item").removeClass("found")
+      $('.menu-item[data-hotspot="'+id+'"]').addClass('found');
+
+      $('#count_found').text(count_found);
+    });
+
+      $(".menu-info").on("click",function(){
+          $(".menu-content").slideToggle()
+        });
+
+        $("[data-fiche]").on("click",function(){
+          let id = $(this).data('fiche');
+
+          $('.fiche').removeClass('show');
+          $('.close').addClass('show');
+          $('#'+id).addClass('show');
+        });
+
+        $('.close').on('click', function(){
+          $('.fiche').removeClass('show');
+          $('.close').removeClass('show');
+        });
+
+    var scrollElScroll = document.querySelector(".map .inner");
+
+    var scr = new ScrollBooster({
+      viewport: document.querySelector(".map"),
+      emulateScroll: true,
+      bounce: false, // Pour éviter l'effet élastique
+      // friction: 0.2, // Pour régler la friction du déplacement
+      onUpdate: function(data) {
+        scrollElScroll.style.transform =
+          "translate(" + -data.position.x + "px, " + -data.position.y + "px)";
+
+          if (count_found == 29){
+            $('.recommencer').show();
+          }
+      },
+    });
+/*
+    setTimeout(function(){
+      src.updateMetrics();
+    }, 1000);
+    */
+
+/*
+    scr.setPosition({
+      x: 500,
+      y: 500
+    });
+*/
+  });
+</script>
+</body>
+</html>
